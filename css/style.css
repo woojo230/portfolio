@@ -93,7 +93,7 @@ button:focus {
 .header__logo {
   display: flex; /*이미지와 텍스트 수평으로 나란히 정렬*/
   align-items: center; /*중간으로 정렬*/
-  gap: 8px; /*felxbox안에 있는 자식들의 간격을 8px 만큼 띄우기*/
+  gap: 8px; /*flexbox안에 있는 자식들의 간격을 8px 만큼 띄우기*/
 }
 
 .header__logo__img {
@@ -383,4 +383,39 @@ button:focus {
   width: 50px;
   height: 2px;
   background-color: var(--color-accent);
+}
+
+/* Testimonial */
+.testimonials {
+  margin: 3rem;
+}
+
+.testimonial {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.testimonial:nth-child(even) .testimonial__img {
+  order: 1; /*짝수번째 tesimonial의 텍스트 & 그림 위치를 바꿔줌*/
+}
+
+.testimonial__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.testimonial__bubble {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.testimonial__bubble__name {
+  color: var(--color-accent);
+  font-weight: bold;
+  filter: brightness(70%);
 }
